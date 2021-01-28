@@ -31,8 +31,6 @@ var HEIGHT, WIDTH;
 
 //INIT THREE JS, SCREEN AND MOUSE EVENTS
 function createScene() {
-  //var audio = document.getElementById("myAudio");
-  //audio.volume = 0.07;
 
   /* Learned to adjust the window size from the Aviator game tutorial  https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/ */
   HEIGHT = window.innerHeight;
@@ -109,7 +107,7 @@ function createLights() {
 MyDino = function(){
   this.status = "running";
 	this.mesh = new THREE.Object3D();
-
+  
   var geomHead = new THREE.BoxGeometry(30,40,40);
   var matHead = new THREE.MeshPhongMaterial({color:Colors.red, shading:THREE.FlatShading});
   var head = new THREE.Mesh(geomHead, matHead);
@@ -158,7 +156,7 @@ MyDino = function(){
   eyeR.receiveShadow = true;
   eyeR.position.set(10,20,26);
   this.mesh.add(eyeR);
-
+  
   var geomEyeBR = new THREE.BoxGeometry(6,6,1);
   var matEyeBR = new THREE.MeshPhongMaterial({color:"white", shading:THREE.FlatShading});
   var eyeBR = new THREE.Mesh(geomEyeBR, matEyeBR);
@@ -174,7 +172,7 @@ MyDino = function(){
   eyeL.receiveShadow = true;
   eyeL.position.set(10,20,-26);
   this.mesh.add(eyeL);
-
+  
   var geomEyeBL = new THREE.BoxGeometry(6,6,1);
   var matEyeBL = new THREE.MeshPhongMaterial({color:"white", shading:THREE.FlatShading});
   var eyeBL = new THREE.Mesh(geomEyeBL, matEyeBL);
@@ -204,7 +202,7 @@ MyDino = function(){
 	this.legR.add(footR);
   this.legR.position.set(-20,-60,20);
   this.mesh.add(this.legR);
-
+  
   var geomHand = new THREE.BoxGeometry(10,10,20);
   var matHand = new THREE.MeshPhongMaterial({color:Colors.red, shading:THREE.FlatShading});
   var hand = new THREE.Mesh(geomHand, matHand);
@@ -229,11 +227,11 @@ MyDino.prototype.jump = function(){
   var _this = this;
   var jumpHeight = 70;
   var currentRadSpeed = (originalSpeed + delta/percent)*Math.PI/180*600;
-  TweenMax.to(this.mesh.position,
-  1.5/currentRadSpeed,
+  TweenMax.to(this.mesh.position, 
+  1.5/currentRadSpeed, 
   {y:yPosition+jumpHeight, ease:Power2.easeOut});
-  TweenMax.to(this.mesh.position,
-  1.5/currentRadSpeed,
+  TweenMax.to(this.mesh.position, 
+  1.5/currentRadSpeed, 
   {y:yPosition, ease:Power4.easeIn, delay:1.5/currentRadSpeed, onComplete: function(){
     _this.status="running";
   }});
@@ -244,7 +242,7 @@ Desert = function(){
   var marsTexture = txtLoader.load("marsmap1kdark1.jpg");
   var marsBumpTexture = txtLoader.load ("marsbump1k.jpg");
   var marsMaterial = new THREE.MeshPhongMaterial({
-    map: marsTexture,
+    map: marsTexture, 
     bumpMap: marsBumpTexture,
     bumpScale: 10,
     shading:THREE.FlatShading});
@@ -281,7 +279,7 @@ Cloud = function(){
     this.mesh.add(m);
   }
 }
-// From
+// From 
 Sky = function(){
   this.mesh = new THREE.Object3D();
   this.nClouds = 20;
@@ -497,7 +495,7 @@ function updateNewCactusBackRotation(){
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min)
+  return Math.floor(Math.random() * (max - min) + min) 
 }
 
 /* Learned this collision checking method from the Aviator game tutorial  https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/ */
@@ -512,7 +510,7 @@ function checkCollision(){
 // MAINS
 function render(){
   delta = clock.getElapsedTime();
-
+  
   if (gameStatus=="playing"){
     if (myDino.status == "running"){
       myDino.run();
@@ -545,7 +543,7 @@ var mousePos = { x: 0, y: 0 };
 function handleMouseDown(event){
   if (gameStatus == "playing"){
     myDino.jump();
-  }
+  } 
   else if (gameStatus == "gameOver"){
     replay();
   }
@@ -558,7 +556,7 @@ window.addEventListener('load', init, false);
 
 // CSS
 /* Learned to link to .css files from the Aviator game tutorial  https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/ */
-function initUI(){
+function initUI(){ 
   fieldDistance = document.getElementById("distValue");
   fieldGameOver = document.getElementById("gameoverInstructions");
 }

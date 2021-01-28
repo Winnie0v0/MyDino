@@ -13,13 +13,22 @@
   position: absolute;
   left: 15%;
   right: 10%;
-  top: 10%;
+  top: 16%;
   bottom: 30%;
   user-select: none;
 }
 
 .some {
   width: 100%;
+}
+
+audio {
+  position: absolute;
+  left: 15%;
+  right: 10%;
+  top: 4%;
+  width: 50vw;
+  height: 8vh;
 }
 
 .label1 {
