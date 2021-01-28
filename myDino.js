@@ -31,7 +31,7 @@ var HEIGHT, WIDTH;
 
 //INIT THREE JS, SCREEN AND MOUSE EVENTS
 function createScene() {
-  var audio = document.getElementById("myAudio");
+  //var audio = document.getElementById("myAudio");
   //audio.volume = 0.07;
 
   /* Learned to adjust the window size from the Aviator game tutorial  https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/ */
