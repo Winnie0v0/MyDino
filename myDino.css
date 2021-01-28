@@ -1,0 +1,120 @@
+/* Learned to use this font from the rabbit game demo https://codepen.io/Yakudoo/pen/YGxYZj */
+@import url('https://fonts.googleapis.com/css?family=Voltaire');
+
+#world {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #000000;
+}
+
+#dist {
+  position: absolute;
+  left: 15%;
+  right: 10%;
+  top: 10%;
+  bottom: 30%;
+  user-select: none;
+}
+
+.some {
+  width: 100%;
+}
+
+.label1 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #ffa873;
+  font-size: 5vmin;
+  font-weight: bold;
+  text-align: left;
+  margin-right: 1.5vmin;
+  float: left;
+}
+
+.label2 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #ffa873;
+  font-size: 3vmin;
+  width: 100%;
+  text-align: left;
+  margin-top: 3vmin;
+  float: left;
+}
+
+.label3 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #ffa873;
+  font-size: 3vmin;
+  text-align: left;
+  margin-left: 4vmin;
+  width: 100%;
+  float: left;
+}
+
+.label4 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #dc5f45;;
+  font-size: 3vmin;
+  text-align: left;
+  margin-left: 4vmin;
+  margin-right: 1vmin;
+  float: left;
+}
+
+.label5 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #5f9042;
+  font-size: 3vmin;
+  text-align: left;
+  margin-left: 4vmin;
+  width: 100%;
+  float: left;
+}
+
+.label6 {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #ffa873;
+  font-size: 2vmin;
+  width: 100%;
+  text-align: left;
+  margin-top: 3vmin;
+  float: left;
+}
+
+/* Learned to use the gameover method from the rabbit game demo https://codepen.io/Yakudoo/pen/YGxYZj */
+#gameoverInstructions {
+  position: relative;
+  font-family: 'Voltaire', sans-serif;
+  color: #dc5f45;
+  font-size: 3vmin;
+  text-align: left;
+  float: left;
+  opacity: 0;
+  user-select: none;
+  transition: all 500ms ease-in-out;
+}
+
+#gameoverInstructions.show {
+  opacity: 1;
+  transition: all 100ms ease-in-out;
+}
+
+#distValue {
+  position: relative;
+  text-transform: uppercase;
+  color: #dc5f45;
+  font-size: 5vmin;
+  width: 14vmin;
+  font-weight: bold;
+  font-family: 'Voltaire';
+  text-align: left;
+  margin-right: 0.7vmin;
+  float: left;
+}
