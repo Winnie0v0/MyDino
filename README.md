@@ -14,7 +14,7 @@ This is 3D version of the running dinosaur game we play when Chrome has no inter
 
 * Add sound effect.
 * Customize audio control panel.
-* The game has different speed on Windows and Mac computers.
+* Adjust the game speed on Windows and Mac computers.
 
 ## Credits
 
