@@ -12,7 +12,7 @@ This is 3D version of the running dinosaur game we play when Chrome has no inter
 
 ## To improve
 
-* Add sound effect.
+* Currently sound effect is added in a seperate bar otherwide the browser will block the sound.
 * Customize audio control panel.
 * Adjust the game speed on Windows and Mac computers.
 
